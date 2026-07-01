@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pizza Coop</title>
+
+<script src="/socket.io/socket.io.js">
+const socket = io();
+
+socket.on("myId", id => {
+  myId = id;
+  console.log("내 ID:", myId);
+});
+</script>
+
+<script src="game.js" defer></script>
+</head>
+
+<body>
+<
+<h2>🍕 협동 피자</h2>
+
+<div id="myIdBox"></div>
+
+
+<div id="info"></div>
+
+<button onclick="setRole('farmer')">농부</button>
+<button onclick="setRole('chef')">요리사</button>
+
+<hr>
+
+<button onclick="farm()">가지</button>
+<button onclick="bee()">꿀</button>
+<button onclick="fish()">생선</button>
+
+<hr>
+
+<button onclick="add('eggplant')">가지 넣기</button>
+<button onclick="add('honey')">꿀 넣기</button>
+<button onclick="add('fish')">생선 넣기</button>
+
+<button onclick="serve()">서빙</button>
+
+<hr>
+
+<button onclick="startVoice()">🎤 음성 시작</button>
+
+</body>
+</html>

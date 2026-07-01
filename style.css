@@ -1,0 +1,85 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
+}
+
+body{
+  background: linear-gradient(135deg,#ffeaa7,#fab1a0);
+  text-align:center;
+  padding:10px;
+}
+
+/* 제목 */
+h2{
+  margin:10px 0;
+  color:#2d3436;
+}
+
+/* 박스 느낌 */
+.box{
+  background:white;
+  margin:10px auto;
+  padding:12px;
+  border-radius:15px;
+  max-width:500px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* 버튼 기본 */
+button{
+  padding:12px 15px;
+  margin:5px;
+  border:none;
+  border-radius:12px;
+  background:#ff9f43;
+  color:white;
+  font-size:15px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+/* 버튼 눌림 효과 */
+button:hover{
+  background:#e67e22;
+  transform:scale(1.05);
+}
+
+button:active{
+  transform:scale(0.95);
+}
+
+/* 역할 버튼 강조 */
+button:nth-child(1){
+  background:#00b894;
+}
+
+button:nth-child(2){
+  background:#0984e3;
+}
+
+/* 정보창 */
+#info{
+  background:#2d3436;
+  color:#00ffcc;
+  padding:10px;
+  border-radius:10px;
+  font-size:13px;
+  text-align:left;
+  white-space:pre;
+}
+
+/* 모바일 최적화 */
+@media (max-width:600px){
+
+  button{
+    width:90%;
+    font-size:18px;
+  }
+
+  .box{
+    width:95%;
+  }
+}
